@@ -1,0 +1,9 @@
+.scroller {
+  scroll-snap-type: y proximity;
+  height: 100vh;
+  overflow-y: scroll;
+
+  section {
+    scroll-snap-align: center;
+  }
+}

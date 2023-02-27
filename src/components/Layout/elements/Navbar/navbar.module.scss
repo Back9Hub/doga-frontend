@@ -1,0 +1,39 @@
+//$custom_image_space: calc(100vh - 243px);
+
+.navbar {
+  position: relative;
+}
+
+.navbar div{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 30px;
+  color: #FFFFFF;
+  width: 100%;
+  // background-color: transparent;
+  // background: linear-gradient(0deg, #3F4C67BB, #3F4C67CC), url('hero-image-homepage.jpg');
+  // background-size: cover;
+  // padding-bottom: $custom_image_space;
+  // margin-bottom: calc(-1 * $custom_image_space);
+}
+
+.links {
+  margin: 47px 198px auto auto;
+  width: 60vw;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between; 
+
+  li {
+    font-size: 1rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      font-size: 1.2rem;
+    }
+    &:active {
+      font-size: 1.2rem;
+    }
+  }
+}

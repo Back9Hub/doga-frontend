@@ -1,0 +1,95 @@
+$border-h: 1px solid #C3C3C3;
+$border-v: 2px solid #C3C3C3;
+
+.footer {
+  color: #3F4C67;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1F1F1;
+  padding-bottom: 50px;
+}
+
+.logoContainer {
+  text-align: center;
+}
+
+.hr {
+  border: $border-h;
+  width: 40vw;
+}
+
+.links { 
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+
+  li {
+    padding: 10px 50px;
+    border-right: $border-v;
+  }
+
+  li:last-child {
+    border: none;
+  }
+}
+
+// .logoContainer:after {
+//   content: " ";
+//   display: block;
+//   width: 60%;
+//   height: 2px;
+//   background-color: #000;
+//   position: absolute;
+//   left: 50%;
+//   bottom: -150px;
+// }
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  width: 35rem;
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+  
+  p {
+    display: inline-block;
+    font-size: 1.125rem;
+    margin-left: 7px;
+    font-weight: 500;
+  }
+
+  .igIcon {
+    width: 21px;
+  }
+}
+
+.copyrightSection {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+
+  .year {
+    display: flex;
+    align-items: center;
+    height: 12px;
+    border-right: $border-v;
+    padding-right: 5px;
+    margin-right: 5px;
+
+    p {
+      margin-left: 4px;
+    }
+  }
+
+  
+}
