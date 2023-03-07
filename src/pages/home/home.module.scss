@@ -1,0 +1,281 @@
+@use '/src/styles/constants';
+
+$custom_image_space: calc(100vh - 243px);
+$text_margin_top: 20vh;
+
+
+.hero {
+  background-color: transparent;
+  background: linear-gradient(0deg, #3F4C67BB, #3F4C67CC), url('hero-image-homepage.jpg');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .title {
+    margin-top: $text_margin_top;
+    color: #FFF;
+    font-size: 5rem;
+    vertical-align: middle;
+    width: 80%;
+    max-width: 1200px;
+
+    @media (max-width: constants.$md) {
+      & {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: calc(constants.$sm - 100px)) {
+      & {
+        font-size: 2.3rem;
+        width: 90%;
+      }
+    }
+  }
+
+  .cta {
+    all: unset;
+    color: #FFF;
+    background-color: #FFBF00;
+    font-weight: 600;
+    margin-top: 14vh;
+    padding: 18px 30px;
+    border-radius: 14px;
+    transition: border-radius 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+      border-radius: 14px 0px 14px 0px;
+      background-color: #926f0e;
+    }
+
+    @media (max-width: constants.$sm) {
+      & {
+        font-size: 0.8rem
+      }
+    }
+  }
+}
+
+.aboutUs {
+  height: 100vh;
+  display: flex;
+
+  @media (max-width: constants.$sm) {
+    & {
+      height: auto;
+      justify-content: center;
+      background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./about-bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .sectionTitle {
+    margin-bottom: 85px;
+
+    @media (max-width: constants.$sm) {
+      & {
+        margin-bottom: 30px;
+        color: constants.$terciary-color;
+        opacity: 50%;
+      }
+    }
+  }
+
+  .aboutDescription {
+    padding: 68px 55px;
+    max-width: 48vw;
+    margin-right: 10%;
+
+    p {
+      font-weight: 300;
+      font-size: 1.25rem;
+      line-height: 36px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: constants.$sm) {
+      & {
+        padding: 60px 5px;
+        max-width: 90vw;
+        text-align: center;
+        margin-right: 0;
+      }
+
+      & p {
+        font-size: 1rem;
+      }
+    }
+
+  }
+
+  @media (max-width: constants.$sm) {
+    .staticSlider {
+      display: none;
+    }
+  }
+}
+
+.services {
+  height: 100vh;
+  background-color: #3F4C67;
+  overflow: hidden;
+  position: relative;
+
+  .sectionTitle {
+    padding: 68px 55px;
+    color: #5E6575;
+
+    @media (max-width: constants.$md) {
+      & {
+        padding: 30px 55px;
+      }
+    }
+    @media (max-width: constants.$sm) {
+      & {
+        padding: 30px 0px;
+      }
+    }
+  }
+
+  .imageSliderContainer {
+    position: absolute;
+    height: 80vh;
+    top: 128px;
+
+    @media (max-width: constants.$md) {
+      & {
+        top: 160px;
+        height: 75vh;
+      }
+    }
+  }
+}
+
+.contactUs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFBF00;
+  color: #C79500;
+  height: 20vh;
+  padding: 0px 100px 0 50px;
+
+  h2 {
+    vertical-align: center;
+    font-size: 3.5rem;
+    margin-right: 10vw;
+
+    @media (max-width: constants.$md) {
+      & {
+        font-size: 2.5rem;
+      }
+    }
+    @media (max-width: constants.$sm) {
+      & {
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  button {
+    color: #FFBF00;
+    background-color: #FFF;
+    border-radius: 14px;
+    padding: 18px 30px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-align: center;
+
+    &:hover {
+      background-color: #FFBF00;
+      color: #FFF;
+    }
+  }
+
+  @media (max-width: constants.$sm) {
+    & {
+      flex-direction: column;
+      height: auto;
+      padding: 20px 40px;
+    }
+  }
+
+}
+
+.serviceIcons {
+
+  padding: 0 40px;
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #F1F1F1;
+
+  @media (max-width: constants.$sm) {
+    & {
+      flex-direction: column;
+      height: auto;
+      padding: 20px 40px;
+    }
+  }
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @media (max-width: constants.$sm) {
+      & {
+        margin-bottom: 20px;
+      }
+    }
+
+    .serviceIcon {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+      
+      @media (max-width: constants.$md) {
+        & {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+
+    .serviceTitle {
+      font-size: 1.5rem;
+      border: 1px solid #3F4C67;
+      color: #3F4C67;
+      padding: 10px 20px;
+
+      @media (max-width: constants.$md) {
+        & {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+.sectionTitle {
+  font-size: 5.625rem;
+  color: #3F4C6733;
+
+  @media (max-width: constants.$sm) {
+    & {
+      font-size: 3.8rem;
+      text-align: center;
+    }
+  }
+}

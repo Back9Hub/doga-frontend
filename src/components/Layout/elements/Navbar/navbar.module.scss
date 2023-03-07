@@ -1,29 +1,41 @@
+@use '/src/styles/constants';
 //$custom_image_space: calc(100vh - 243px);
 
 .navbar {
   position: relative;
+
+  &>div {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px;
+    color: #FFFFFF;
+    // width: 100%;
+  }
+
+  @media (max-width: constants.$md) {
+    .logo {
+      width: 160px;
+      height: auto;
+    }
+  }
+
+  @media (max-width: constants.$sm) {
+    .logo {
+      width: 130px;
+      height: auto;
+    }
+  }
 }
 
-.navbar div{
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  padding: 25px 30px;
-  color: #FFFFFF;
-  width: 100%;
-  // background-color: transparent;
-  // background: linear-gradient(0deg, #3F4C67BB, #3F4C67CC), url('hero-image-homepage.jpg');
-  // background-size: cover;
-  // padding-bottom: $custom_image_space;
-  // margin-bottom: calc(-1 * $custom_image_space);
-}
 
 .links {
-  margin: 47px 198px auto auto;
+  margin: 47px 8vw auto auto;
   width: 60vw;
   font-weight: 500;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 
   li {
     font-size: 1rem;
@@ -32,8 +44,40 @@
     &:hover {
       font-size: 1.2rem;
     }
+
     &:active {
       font-size: 1.2rem;
     }
+
+    @media (max-width: constants.$md) {
+      & {
+        font-size: 0.7rem;
+      }
+
+      &:hover {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  @media (max-width: constants.$sm) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.hamMenu {
+  position: absolute;
+  height: 55px;
+  top: 5%;
+  right: 5%;
+  color: constants.$secondary-color;
+  background-color: constants.$primary-color;
+  border-radius: 5px;
+  z-index: 12;
+
+  .hamIcon {
+    font-size: 40px;
   }
 }

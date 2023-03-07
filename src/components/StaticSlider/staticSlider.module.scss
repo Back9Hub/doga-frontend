@@ -1,0 +1,28 @@
+.staticSlider {
+  position: relative;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: url("./about-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  .slider {
+    width: 25vw;
+    height: 25vw;
+    background: url("./ventanas-oficina-negocio-rascacielos.jpg");
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(8px 7px 6px rgba(0, 0, 0, 0.25));
+  }
+
+  .nextArrow { 
+    position: absolute;
+    right: 25%;
+    bottom: 30%;
+    z-index: 12;
+  }
+}

@@ -1,3 +1,5 @@
+@use '/src/styles/constants';
+
 $border-h: 1px solid #C3C3C3;
 $border-v: 2px solid #C3C3C3;
 
@@ -13,28 +15,69 @@ $border-v: 2px solid #C3C3C3;
 
 .logoContainer {
   text-align: center;
+  width: clamp(90px, 15vw, 130px);
+
+  @media (max-width: constants.$sm) {
+    & {
+      width: 90px;
+    }
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .hr {
   border: $border-h;
   width: 40vw;
+
+  @media (max-width: constants.$sm) {
+    & {
+      width: 80vw;
+    }
+  }
 }
 
-.links { 
-  margin-top: 20px;
+.linksContainer {
   display: flex;
-  justify-content: space-between;
-  font-size: 0.75rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+  justify-content: center;
+  
+  .links { 
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
 
-  li {
-    padding: 10px 50px;
-    border-right: $border-v;
-  }
+    @media (max-width: constants.$sm) {
+      & {
+        margin-top: 8px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    
+    li {
+      font-size: clamp(0.7rem, 1.8vw, 0.75rem);
+      padding: 10px 50px;
+      border-right: $border-v;
 
-  li:last-child {
-    border: none;
+      @media (max-width: constants.$sm) {
+        & {
+          padding: 20px 30px;
+          border-right: 0;
+          border-bottom: $border-v;
+        }
+      }
+    }
+  
+    li:last-child {
+      border: none;
+    }
   }
 }
 
@@ -53,7 +96,17 @@ $border-v: 2px solid #C3C3C3;
   display: flex;
   justify-content: space-between;
   font-weight: 500;
-  width: 35rem;
+  width: clamp(300px, 80vw, 600px);
+  font-size: clamp(0.7rem, 2vw, 1rem);
+
+  @media (max-width: constants.$sm) {
+    & {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
 }
 
 .socialMedia {
@@ -77,18 +130,34 @@ $border-v: 2px solid #C3C3C3;
   display: flex;
   align-items: center;
   margin-top: 18px;
+  
+  p {
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    margin-right: 5px;
+  }
 
-  .year {
+  .yearLogo {
     display: flex;
     align-items: center;
     height: 12px;
     border-right: $border-v;
     padding-right: 5px;
     margin-right: 5px;
+    width: clamp(100px, 20vw, 120px);
 
-    p {
-      margin-left: 4px;
+    .year {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin-left: 3px;
+      }
     }
+    
+    .copyrightIcon {
+      width: clamp(12px, 2.5vw, 20px);
+    }
+
   }
 
   

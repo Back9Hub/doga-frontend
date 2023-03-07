@@ -1,4 +1,4 @@
-import Homepage from '@/components/templates/Homepage'
+import Homepage from '@/pages/home'
 
 export default function Home() {
   return (

@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Montserrat } from 'next/font/google'
 import styles from './layout.module.scss'
+import WhatsAppFloatingIcon from "@/components/WhatsAppFloatingIcon";
 
 const montserrat = Montserrat({ 
   weight: ['300','400','500','600','700'],
@@ -30,6 +31,7 @@ export default function Layout({children}) {
           {children}
         <Footer />
       </div>
+      <WhatsAppFloatingIcon/>
     </>
   )
 }
