@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import styles from "./projectCard.module.scss"
 
 export default function ProjectCard({src="/projectImages/project1.png", name="Project", description="Project Description"}) {
@@ -20,7 +21,9 @@ export default function ProjectCard({src="/projectImages/project1.png", name="Pr
           <h3 className={styles.title}>{name}</h3>
           <p className={styles.description}>{description}</p>
         </div>
-        <button className={styles.button}>SEE</button>
+        <Link href="/portfolio/projectName">
+          <button className={styles.button}>SEE</button>
+        </Link>
       </div>
     </div>
   )
