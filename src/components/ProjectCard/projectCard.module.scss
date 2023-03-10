@@ -1,0 +1,59 @@
+@use '/src/styles/constants';
+
+.container {
+  color: #f1f1f1;
+  width: 50vw;
+  height: auto;
+  padding: 10px 0;  
+
+  display: flex;
+  gap: 3vw;
+  
+  .imageContainer {
+    aspect-ratio: 1/1;
+    width: 14vw;
+    height: auto;
+    background-color: #000;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(black, 0.5);
+
+    .image {
+      object-fit: cover;
+    }
+  }
+
+  .rightContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+
+    .title {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    .button {
+      width: fit-content;
+      text-align: center;
+      border-radius: 14px;
+      color: constants.$primary-color;
+      font-weight: 600;
+      background-color: #f1f1f1;
+      padding: 5px 42px;
+      transition: all 0.15s ease-out;
+      cursor: pointer;
+
+      &:hover {
+        background-color: constants.$primary-color;
+        color: #f1f1f1;
+      }
+    }
+  }
+}

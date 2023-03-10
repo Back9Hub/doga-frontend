@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import styles from './navbar.module.scss'
 import logo from '/public/DOGA_LOGO_Blanco.png'
+import { useRouter } from 'next/router';
 
 const dividerStyle = {
   mb: 2, 
@@ -22,20 +23,23 @@ export default function Navbar() {
     setOpen(open);
   };
 
+  const router = useRouter();
+
+  let isContactUs = router.pathname === "/contact";
 
   return (
     <>
-      <nav className={styles.navbar}>
+      <nav className={`${styles.navbar} ${isContactUs ? styles.navbarContact : ""}`}>
         <div>
           <Link href="/">
-            <Image src={logo} alt="logo" className={styles.logo}/>
+            <Image src={logo} alt="logo" className={`${styles.logo} ${isContactUs ? styles.logoContact : ""}`}/>
           </Link>
           <ul className={styles.links}>
             <li>
               <Link href="/">HOME</Link>
             </li>
             <li>
-              <Link href="/about">ABOUT US</Link>
+              <Link href="/home#about">ABOUT US</Link>
             </li>
             <li>
               <Link href="/portfolio">PORTFOLIO</Link>
@@ -94,7 +98,7 @@ export default function Navbar() {
           <Divider sx={dividerStyle} />
             
           <ListItemButton onClick={toggleDrawer(false)}>
-            <Link href="/about"> 
+            <Link href="/home#about"> 
               <ListItemText primaryTypographyProps={{ color: "#3F4C67", fontSize: "20px", fontWeight: "500" }} primary="ABOUT US" />
             </Link>
           </ListItemButton>

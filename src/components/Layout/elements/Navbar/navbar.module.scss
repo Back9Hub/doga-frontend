@@ -11,7 +11,21 @@
     justify-content: space-between;
     padding: 25px 30px;
     color: #FFFFFF;
+    transition: all 300ms ease;
+    align-items: center;
     // width: 100%;
+  }
+
+  .logo {
+    width: 218px;
+    height: auto;
+    transition: all 300ms ease;
+  }
+  // This is a style that will be applied to
+  // only if on the "/contact" route
+  .logoContact {
+    width: 130px;
+    height: auto;
   }
 
   @media (max-width: constants.$md) {
@@ -29,6 +43,13 @@
   }
 }
 
+.navbarContact {
+  &>div {
+    background-color: constants.$primary-color;
+    padding: 10px 30px;
+
+  }
+}
 
 .links {
   margin: 47px 8vw auto auto;

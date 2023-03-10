@@ -17,7 +17,7 @@ export default function Homepage() {
           <button className={styles.cta}>A QUOTE NOW</button>
         </Link>
       </section>
-      <section className={styles.aboutUs}>
+      <section id="about" className={styles.aboutUs}>
         <div className={styles.aboutDescription}>
           <h1 className={styles.sectionTitle}>
             ABOUT US

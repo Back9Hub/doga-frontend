@@ -3,7 +3,11 @@ import { useState } from "react";
 import Arrow from "../Arrow";
 import styles from './staticSlider.module.scss'
 
-const imageUrls = [];
+const imageUrls = [
+  "/projectImages/project1.png",
+  "/projectImages/project2.png",
+  "/projectImages/project3.png"
+];
 
 
 export default function StaticSlider({className}) {
@@ -11,8 +15,8 @@ export default function StaticSlider({className}) {
 
   return (
     <div className={`${styles.staticSlider} ${className}`}>
-      <div className={styles.slider}>
-        <Image href={imageUrls[index]}/>
+      <div style={{background: `url(${imageUrls[index]})`}} className={styles.slider}>
+        {/* <Image src={imageUrls[index]}/> */}
       </div>
       <Arrow className={styles.nextArrow} direction="right" onClick={() => setIndex(index => index + 1)}/>
     </div>

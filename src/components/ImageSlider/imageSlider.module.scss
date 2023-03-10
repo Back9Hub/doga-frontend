@@ -1,3 +1,5 @@
+@use '/src/styles/constants';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -12,6 +14,40 @@
     height: 550px;
     overflow: hidden;
     width: 100vw;
+
+    .title {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #FFF;
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 2px 2px 5px rgba(black, 0.5);
+      z-index: 10;
+      transition: all 0.3s ease;
+    }
+
+    .button {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: constants.$terciary-color;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 10;
+      padding: 15px 20px;
+      width: max-content;
+      border-radius: 5px;
+      color: #FFF;
+      font-weight: 700;
+      font-size: 1rem;
+      text-shadow: 2px 2px 5px rgba(black, 0.5);
+
+    }
   
     .image {
       position: absolute; 
@@ -19,6 +55,16 @@
       width: 250px;
       background-color: antiquewhite;
       transition: all 0.3s ease;
+
+      &:not(.image3) {
+        .button {
+          font-size: 0.7rem;
+          padding: 11.25px 15px;
+        }
+        .title {
+          font-size: 1.2rem;
+        }
+      }
     }
     .image0 {
       left: 50vw;
@@ -37,6 +83,10 @@
       transform: translateX(-50%);
       height: 520px;
       width: 325px;
+
+      .button:hover {
+        background-color: constants.$primary-color;
+      } 
     }
     .image4 {
       left: 50vw;

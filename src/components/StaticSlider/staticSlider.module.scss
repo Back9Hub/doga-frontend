@@ -8,18 +8,17 @@
   background: url("./about-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  
+
   .slider {
     width: 25vw;
     height: 25vw;
-    background: url("./ventanas-oficina-negocio-rascacielos.jpg");
-    background-color: blue;
+    // background: url("./ventanas-oficina-negocio-rascacielos.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     filter: drop-shadow(8px 7px 6px rgba(0, 0, 0, 0.25));
   }
 
-  .nextArrow { 
+  .nextArrow {
     position: absolute;
     right: 25%;
     bottom: 30%;

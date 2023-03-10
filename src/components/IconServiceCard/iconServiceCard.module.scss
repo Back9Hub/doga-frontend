@@ -1,0 +1,30 @@
+@use '/src/styles/constants';
+
+.card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  text-align: center;
+  
+  .iconContainer {
+    padding: 10px;
+    border: 2px solid constants.$primary-color;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .icon {
+      width: 100%;
+    }
+  }
+
+  .title {
+    font-size: 1.5rem;
+    color: constants.$primary-color;
+    font-weight: 500;
+  }
+}
