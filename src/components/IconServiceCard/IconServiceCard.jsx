@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./iconServiceCard.module.scss"
 
-export default function({title, src, className = ""}) {
+export default function iconServiceCard({title, src, className = ""}) {
   return (
     <div className={`${styles.card} ${className}`}>
       <div className={styles.iconContainer}>
