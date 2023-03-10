@@ -6,6 +6,7 @@ export default function({title, src, className = ""}) {
     <div className={`${styles.card} ${className}`}>
       <div className={styles.iconContainer}>
         <Image 
+          alt={title}
           className={styles.icon} 
           src={src}
           width="0"
