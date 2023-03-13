@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    
+
     height: 550px;
     overflow: hidden;
     width: 100vw;
@@ -36,7 +36,6 @@
       transform: translateX(-50%);
       background-color: constants.$terciary-color;
       border: none;
-      cursor: pointer;
       transition: all 0.3s ease;
       z-index: 10;
       padding: 15px 20px;
@@ -45,12 +44,13 @@
       color: #FFF;
       font-weight: 700;
       font-size: 1rem;
+      cursor: pointer;
       text-shadow: 2px 2px 5px rgba(black, 0.5);
 
     }
-  
+
     .image {
-      position: absolute; 
+      position: absolute;
       height: 400px;
       width: 250px;
       background-color: antiquewhite;
@@ -58,26 +58,32 @@
 
       &:not(.image3) {
         .button {
+          cursor: default;
           font-size: 0.7rem;
           padding: 11.25px 15px;
         }
+
         .title {
           font-size: 1.2rem;
         }
       }
     }
+
     .image0 {
       left: 50vw;
       transform: translateX(-420%);
     }
+
     .image1 {
       left: 50vw;
       transform: translateX(-320%);
     }
+
     .image2 {
       left: 50vw;
       transform: translateX(-200%);
     }
+
     .image3 {
       left: 50%;
       transform: translateX(-50%);
@@ -86,30 +92,33 @@
 
       .button:hover {
         background-color: constants.$primary-color;
-      } 
+      }
     }
+
     .image4 {
       left: 50vw;
       transform: translateX(100%);
     }
+
     .image5 {
       left: 50vw;
       transform: translateX(220%);
     }
+
     .image6 {
       left: 50vw;
       transform: translateX(320%);
     }
   }
-  
+
   .arrowsContainer {
     width: 100%;
     display: flex;
     justify-content: center;
-  
+
     .leftArrow {
       margin-right: 50px;
     }
-  
+
   }
 }
