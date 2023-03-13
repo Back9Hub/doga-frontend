@@ -13,14 +13,14 @@ export default function Footer() {
       <div className={styles.logoContainer}>
         <Image src={logo} alt="logo" className={styles.logo} />
       </div>
-      <hr className={styles.hr}/>
+      <hr className={styles.hr} />
       <div className={styles.linksContainer}>
         <ul className={styles.links}>
           <li>
-            <Link href="/">HOME</Link>
+            <Link href="/home">HOME</Link>
           </li>
           <li>
-            <Link href="/about">ABOUT US</Link>
+            <Link href="/home#about">ABOUT US</Link>
           </li>
           <li>
             <Link href="/portfolio">PORTFOLIO</Link>
@@ -39,17 +39,17 @@ export default function Footer() {
       </div>
       <Link href="https://www.instagram.com/dogaconstruction/">
         <div className={styles.socialMedia}>
-            <IgIcon className={styles.igIcon}/>
-            <p>dogaconstruction</p>
+          <IgIcon className={styles.igIcon} />
+          <p>dogaconstruction</p>
         </div>
       </Link>
       <div className={styles.copyrightSection}>
         <div className={styles.yearLogo}>
           <div className={styles.year}>
-            <CopyrightIcon className={styles.copyrightIcon}/>
+            <CopyrightIcon className={styles.copyrightIcon} />
             <p>2023</p>
           </div>
-          <Back9Icon className={styles.back9Icon}/>
+          <Back9Icon className={styles.back9Icon} />
         </div>
         <p>Todos los derechos reservados</p>
       </div>

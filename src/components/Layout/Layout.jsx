@@ -6,11 +6,12 @@ import { Montserrat } from 'next/font/google'
 import styles from './layout.module.scss'
 import WhatsAppFloatingIcon from "@/components/WhatsAppFloatingIcon";
 
-const montserrat = Montserrat({ 
-  weight: ['300','400','500','600','700'],
-  subsets: ['latin'] })
+const montserrat = Montserrat({
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin']
+})
 
-export default function Layout({children}) {
+export default function Layout({ children }) {
   return (
     <>
       <Head>
@@ -26,12 +27,12 @@ export default function Layout({children}) {
           }
         `}
       </style>
-      <div className={styles.scroller}>
-        <Navbar/>
-          {children}
-        <Footer />
-      </div>
-      <WhatsAppFloatingIcon/>
+      {/* <div className={styles.scroller}> */}
+      <Navbar />
+      {children}
+      <Footer />
+      {/* </div> */}
+      <WhatsAppFloatingIcon href="" />
     </>
   )
 }

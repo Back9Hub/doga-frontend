@@ -25,10 +25,10 @@ const containerStyle = {
 
 }
 
-export default function WhatsAppFloatingIcon() {
+export default function WhatsAppFloatingIcon({href}) {
     return (
       <Box sx={ buttonStyle } >
-        <Link style={ containerStyle } href={''} >
+        <Link style={ containerStyle } href={href} >
         <WhatsAppIcon sx={{height:'auto',width:'50%', color:'#34af23'}} />
         </Link>
       </Box>
