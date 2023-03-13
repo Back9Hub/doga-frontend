@@ -80,7 +80,7 @@ export default function Contact() {
                 placeholder="Enter your message here"
               />
             </div>
-            <button type="submit">Send</button>
+            <button className={styles.button} type="submit">Send</button>
           </form>
         </div>
       </div>

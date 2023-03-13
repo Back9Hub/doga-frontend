@@ -73,7 +73,28 @@
         padding-right: 10vw;  
       }
 
-
+      .button {
+        all: unset;
+        color: #FFF;
+        background-color: #FFBF00;
+        font-weight: 600;
+        padding: 10px 30px;
+        border-radius: 14px;
+        width: fit-content;
+        margin-top: 10px;
+        transition: border-radius 0.3s ease, background-color 0.3s ease;
+        
+        &:hover {
+          border-radius: 14px 0px 14px 0px;
+          background-color: #926f0e;
+        }
+    
+        @media (max-width: constants.$sm) {
+          & {
+            font-size: 0.8rem
+          }
+        }
+      }
 
     }
 
